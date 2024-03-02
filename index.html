@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisyUI cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
+</head>
+<body>
+    <header class="max-w-[1170px] mx-auto my-[50px]">
+        <div class="navbar bg-base-100 justify-between">
+            <div class="navbar-center">
+              <a class="btn btn-ghost text-xl"><img src="images/logo.png" alt="images/logo.png"></a>
+            </div>
+            <div class="navbar-end">
+              <button class="btn btn-ghost btn-circle">
+                <img src="images/home-1.png" alt="images/home-1.png">
+              </button>
+              <button class="btn btn-ghost btn-circle mx-3">
+                <img src="images/pen-1.png" alt="images/pen-1.png">
+              </button>
+              <button class="btn btn-ghost btn-circle">
+                <img src="images/contact.png" alt="images/contact.png">
+              </button>
+              <button class="btn btn-ghost btn-circle ml-3 mr-6">
+                <img src="images/flag.png" alt="images/flag.png">
+              </button>
+              <a class=" py-4 px-10 bg-indigo-500 text-white text-lg text-center rounded-[50px]">
+                Sign In
+              </a>
+            </div>
+          </div>
+    </header>
+
+
+    <div id="category">
+
+    </div>
+    <section class="banner-section max-w-[1170px] mx-auto ">
+        <div class="container  bg-[#12132D] h-[550px] rounded-[32px] p-[100px] flex flex-col md:flex-row justify-between">
+            <div class="max-w-[496px]">
+                <h2 class="text-[64px] leading-[86px] text-white">Welcome to the <span class="text-[#C479FC]">ReTro</span> Forum</h2>
+                <p class="text-white text-[20px] leading-[36px] font-medium mt-5 mb-8">Share your favorite opinion and win and wp forum coffee mug!</p>
+                <form action="" class="bg-white py-[18px] flex flex-row justify-between rounded-[50px]">
+                    <input id="search-field" class="ml-5 border-0 outline-0" type="search" name="" id="serch" placeholder="Search here anything">
+                    <label for="search"><a onclick="handlesearch('${cards?.category}')" href="#" class="py-4 px-10 bg-indigo-500 text-white text-lg text-center rounded-[50px] mr-2">Search</a></label>
+                    
+                </form>
+            </div>
+            <div class="p-12 bg-white rounded-[50px] max-w[371px]">
+                <ul class="flex flex-col  justify-between w-[276px]">
+                    <li class="flex justify-between mt-6"> <span>Registered Users</span> <span>01</span></li>
+                    <li class="flex justify-between mt-6"> <span>Forum</span> <span>02</span></li>
+                    <li class="flex justify-between mt-6"> <span>Topics</span> <span>03</span></li>
+                    <li class="flex justify-between mt-6"> <span>Replies</span> <span>04</span></li>
+                    
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+<section class="max-w-[1170px] mx-auto mt-[100px]">
+    <div class="container">
+        <div class="title-section max-w-[691px] mx-auto">
+            <h2 class=" text-center text-4xl text-black font-semibold">Let’s Discuss</h2>
+            <p class=" text-center mt-6 mb-12">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        </div>
+
+        <div class="box-container flex justify-between">
+            <div id="card-container">
+                <div class="cart bg-[#797dfc18] rounded-[50px] flex p-10">
+                    <div class="image w-[72px] h-[72px] rounded-[16px] bg-white mr-6 text-center">
+                        <img src="images/pen-1.png" alt="images/pen-1.png">
+                    </div>
+                    <div class="content">
+                       
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div id="card-show-container" class=" bg-[#12132d0d] p-6 rounded-[24px]">
+          
+                <div class="flex items-center justify-between ">
+                    <h2 class="text-2xl font-bold text-black">Title</h2>
+                    <p>Mark as read <span>(4)</span> </p>
+                </div> 
+               
+                  
+                  
+               
+               
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="max-w-[1170px] mx-auto mt-[100px]">
+    <div class="container">
+        <div class="title-section max-w-[691px] mx-auto">
+            <h2 class=" text-center text-4xl text-black font-semibold">latest product</h2>
+            <p class=" text-center mt-6 mb-12">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        </div>
+
+        <div class="latest-box-container flex justify-between">
+            <div id="latest-card-container">
+                <div class="cart bg-[#797dfc18] rounded-[50px] flex p-10">
+                    <div class="image w-[72px] h-[72px] rounded-[16px] bg-white mr-6 text-center">
+                        <img src="images/pen-1.png" alt="images/pen-1.png">
+                    </div>
+                    <div class="content">         
+                    </div>
+                </div>
+
+            </div>
+            <div id="card-show-container" class=" bg-[#12132d0d] p-6 rounded-[24px]">
+                <div class="flex items-center justify-between ">
+                    <h2 class="text-2xl font-bold text-black">Title</h2>
+                    <p>Mark as read <span>(4)</span> </p>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
