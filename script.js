@@ -234,18 +234,4 @@ const latestproductdisplay = (card)=>{
     // };  
 
 
-    // const handleCategory = async () =>{
-    //     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts?category=coding');
-    //     const data = await res.json();
-    //     console.log(data.data)
-    //     // const tabContainer = document.getElementById('tab-container');
-    
-    //     data.data.forEach(category => {
-    //         const div = document.createElement('div');
-    //         div.classList = `btn`;
-    //         div.innerHTML = `
-    //         <a onClick = "handleLoadCategory('${category.category_id}')" class="tab text-base font-medium">${category.category}</a> 
-    //         `;
-    //         tabContainer.appendChild(div);
-    //     });
-    // };
+   
