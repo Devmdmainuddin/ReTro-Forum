@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <!-- daisyUI cdn link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        *{
+            font-family: "Mulish", sans-serif;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/101cdeab15.js" crossorigin="anonymous"></script>
     <script>
         tailwind.config = {
           theme: {
@@ -27,18 +36,21 @@
               <a class="btn btn-ghost text-xl"><img src="images/logo.png" alt="images/logo.png"></a>
             </div>
             <div class="navbar-end">
-              <button class="btn btn-ghost btn-circle">
-                <img src="images/home-1.png" alt="images/home-1.png">
-              </button>
-              <button class="btn btn-ghost btn-circle mx-3">
-                <img src="images/pen-1.png" alt="images/pen-1.png">
-              </button>
-              <button class="btn btn-ghost btn-circle">
-                <img src="images/contact.png" alt="images/contact.png">
-              </button>
-              <button class="btn btn-ghost btn-circle ml-3 mr-6">
-                <img src="images/flag.png" alt="images/flag.png">
-              </button>
+                <div class="md:flex items-center hidden  ">
+                    <button class="btn btn-ghost btn-circle tooltip" data-tip="home">
+                        <img src="images/home-1.png" alt="images/home-1.png">
+                      </button>
+                      <button class="btn btn-ghost btn-circle mx-3 tooltip" data-tip="pen">
+                        <img src="images/pen-1.png" alt="images/pen-1.png">
+                      </button>
+                      <button class="btn btn-ghost btn-circle tooltip"data-tip="contact">
+                        <img src="images/contact.png" alt="images/contact.png">
+                      </button>
+                      <button class="btn btn-ghost btn-circle ml-3 mr-6 tooltip"data-tip="flag">
+                        <img src="images/flag.png" alt="images/flag.png">
+                      </button>
+                </div>
+              
               <a class=" py-4 px-10 bg-indigo-500 text-white text-lg text-center rounded-[50px]">
                 Sign In
               </a>
@@ -47,21 +59,23 @@
     </header>
 
 
-    <div id="category">
+
+
+    <div id="category" class="flex gap-6 p-5 justify-center">
 
     </div>
     <section class="banner-section max-w-[1170px] mx-auto ">
-        <div class="container  bg-[#12132D] h-[550px] rounded-[32px] p-[100px] flex flex-col md:flex-row justify-between">
+        <div class="container  bg-[#12132D] h-[550px] rounded-[32px] p-5 md:p-[100px] flex flex-col md:flex-row justify-between">
             <div class="max-w-[496px]">
-                <h2 class="text-[64px] leading-[86px] text-white">Welcome to the <span class="text-[#C479FC]">ReTro</span> Forum</h2>
-                <p class="text-white text-[20px] leading-[36px] font-medium mt-5 mb-8">Share your favorite opinion and win and wp forum coffee mug!</p>
+                <h2 class="text-2xl md:text-[44px] lg:text-[64px] leading-[86px] text-white">Welcome to the <span class="text-[#C479FC]">ReTro</span> Forum</h2>
+                <p class="text-white text-[20px] leading-[36px] font-medium mt-2 md:mt-5 mb-2 md:mb4 lg:mb-8">Share your favorite opinion and win and wp forum coffee mug!</p>
                 <form action="" class="bg-white py-[18px] flex flex-row justify-between rounded-[50px]">
                     <input id="search-field" class="ml-5 border-0 outline-0" type="search" name="" id="serch" placeholder="Search here anything">
-                    <label for="search"><a onclick="handlesearch('${cards?.category}')" href="#" class="py-4 px-10 bg-indigo-500 text-white text-lg text-center rounded-[50px] mr-2">Search</a></label>
+                    <label for="search"><a onclick="handleSearch()" href="#" class="py-4 px-10 bg-indigo-500 text-white text-lg text-center rounded-[50px] mr-2">Search</a></label>
                     
                 </form>
             </div>
-            <div class="p-12 bg-white rounded-[50px] max-w[371px]">
+            <div class="p-4 md:p-12 bg-white rounded-[50px] max-w[371px]">
                 <ul class="flex flex-col  justify-between w-[276px]">
                     <li class="flex justify-between mt-6"> <span>Registered Users</span> <span>01</span></li>
                     <li class="flex justify-between mt-6"> <span>Forum</span> <span>02</span></li>
@@ -82,36 +96,36 @@
             <p class=" text-center mt-6 mb-12">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
         </div>
 
-        <div class="box-container flex justify-between">
-            <div id="card-container">
-                <div class="cart bg-[#797dfc18] rounded-[50px] flex p-10">
-                    <div class="image w-[72px] h-[72px] rounded-[16px] bg-white mr-6 text-center">
-                        <img src="images/pen-1.png" alt="images/pen-1.png">
-                    </div>
-                    <div class="content">
-                       
-                        
-                    </div>
-                </div>
-
+        <div class="box-container flex flex-col md:flex-row justify-between ">
+            <div id="card-container" class="max-w-full md:max-w-[772px]">
+               
             </div>
-            <div id="card-show-container" class=" bg-[#12132d0d] p-6 rounded-[24px]">
+            <div id="card-show-container" class="max-w-full md:max-w-[374px] bg-[#12132d0d] p-6 rounded-[24px] max-h-[400px]">
           
                 <div class="flex items-center justify-between ">
-                    <h2 class="text-2xl font-bold text-black">Title</h2>
-                    <p>Mark as read <span>(4)</span> </p>
+                    <h2 class="text-2xl font-bold text-black mr-4">Title</h2>
+                    <p>Mark as read (<span class="count"></span>) </p>
                 </div> 
                
-                  
-                  
-               
-               
-
-
             </div>
         </div>
     </div>
 </section>
+
+<section class="banner-section max-w-[1170px] mx-auto ">
+    <div class="container  bg-[#12132D] h-[550px] rounded-[32px] p-5 md:p-[100px] flex flex-col md:flex-row justify-between">
+        <div class="max-w-[496px]">
+            <h2 class="text-2xl md:text-[44px] lg:text-[64px] leading-[86px] text-white">Join Our Forum</h2>
+            <p class="text-white text-[20px] leading-[36px] font-medium mt-2 md:mt-5 mb-2 md:mb4 lg:mb-8">Share your favorite opinion and win and wp forum coffee mug!</p>
+            <a class=" py-4 px-10 bg-indigo-500 text-white text-lg text-center rounded-[50px]">Registered Now</a>
+        </div>
+        <div class="p-4 md:p-12  rounded-[50px] max-w[371px]">
+            <img src="images/joinforum.png" alt="">
+        </div>
+    </div>
+
+</section>
+
 
 
 <section class="max-w-[1170px] mx-auto mt-[100px]">
@@ -122,26 +136,33 @@
         </div>
 
         <div class="latest-box-container flex justify-between">
-            <div id="latest-card-container">
-                <div class="cart bg-[#797dfc18] rounded-[50px] flex p-10">
-                    <div class="image w-[72px] h-[72px] rounded-[16px] bg-white mr-6 text-center">
-                        <img src="images/pen-1.png" alt="images/pen-1.png">
-                    </div>
-                    <div class="content">         
-                    </div>
-                </div>
-
-            </div>
-            <div id="card-show-container" class=" bg-[#12132d0d] p-6 rounded-[24px]">
-                <div class="flex items-center justify-between ">
-                    <h2 class="text-2xl font-bold text-black">Title</h2>
-                    <p>Mark as read <span>(4)</span> </p>
-                </div> 
+            <div id="latest-card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+ 
             </div>
         </div>
     </div>
 </section>
 
+
+<footer class="max-w-[1170px] bg-[#f5f5f7] mx-auto pt-[100px] pb-[100px] flex justify-center items-center flex-col">
+    <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+    <p class="max-w-[604px] mt-4 mb-8 text-center">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC
+        </p>
+    <div class="icons">
+        <ul class="flex justify-center">
+            <li class="pr-6"><i class="fa-brands fa-twitter"></i></li>
+            <li class="pr-6"><i class="fa-brands fa-facebook"></i></li>
+            <li class="pr-6"><i class="fa-brands fa-instagram"></i></li>
+            <li class="pr-6"><i class="fa-brands fa-github"></i></li>
+        </ul>
+    </div>
+    <div class="horigontal w-full h-[2px] my-12">
+        <hr>
+    </div>
+   
+    <div class="credit"> copyright @ 2024 by <span>devmdmainuddin</span> </div>
+</footer>
 
 
 <script src="script.js"></script>
