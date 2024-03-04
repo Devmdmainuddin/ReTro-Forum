@@ -50,7 +50,7 @@ const displayphone = (card,)=>{
    
     
 
-    // showphonedetails(cards)
+   
     postcontiner.appendChild(cardDiv)
    
     
