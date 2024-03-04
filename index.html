@@ -59,11 +59,24 @@
     </header>
 
 
+    <section class="container mx-auto"> 
+        <div>
+            <div id="loading-spener" class="text-center my-4 hidden">
+                <span class="loading loading-bars loading-xs"></span>
+                <span class="loading loading-bars loading-sm"></span>
+                <span class="loading loading-bars loading-md"></span>
+                <span class="loading loading-bars loading-lg"></span>
+    
+            </div>
+        </div>
+        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  ">
+            
+             
+        </div>
+        <button onclick="handelsowall(true)" id="showallbtn" class="btn btn-secondary hidden text-center ">Ghost</button>
+      
+    </section>
 
-
-    <div id="category" class="flex gap-6 p-5 justify-center">
-
-    </div>
     <section class="banner-section max-w-[1170px] mx-auto ">
         <div class="container  bg-[#12132D] h-[550px] rounded-[32px] p-5 md:p-[100px] flex flex-col md:flex-row justify-between">
             <div class="max-w-[496px]">
@@ -89,6 +102,8 @@
 
     </section>
 
+ 
+
 <section class="max-w-[1170px] mx-auto mt-[100px]">
     <div class="container">
         <div class="title-section max-w-[691px] mx-auto">
@@ -100,11 +115,15 @@
             <div id="card-container" class="max-w-full md:max-w-[772px]">
                
             </div>
-            <div id="card-show-container" class="max-w-full md:max-w-[374px] bg-[#12132d0d] p-6 rounded-[24px] max-h-[400px]">
+            <div id="card-show-container" class="max-w-full md:max-w-[374px] bg-[#12132d0d] p-6 rounded-[24px]">
           
-                <div class="flex items-center justify-between ">
-                    <h2 class="text-2xl font-bold text-black mr-4">Title</h2>
-                    <p>Mark as read (<span class="count"></span>) </p>
+                <div>
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-bold text-black mr-4" id="showtitle">Title</h2>
+                        <p>Mark as read ( <span id="counts">0</span> ) </p>
+                    </div>
+                    
+                    <div id="showitems" class=""></div>
                 </div> 
                
             </div>
@@ -145,7 +164,7 @@
 </section>
 
 
-<footer class="max-w-[1170px] bg-[#f5f5f7] mx-auto pt-[100px] pb-[100px] flex justify-center items-center flex-col">
+<footer class="max-w-[1170px] mt-[100px] bg-[#f5f5f7] mx-auto pt-[100px] pb-[100px] flex justify-center items-center flex-col">
     <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
     <p class="max-w-[604px] mt-4 mb-8 text-center">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC
         </p>
