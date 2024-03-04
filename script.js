@@ -16,8 +16,7 @@ const displayphone = (card,)=>{
     const postcontiner = document.getElementById('card-container');
 
     postcontiner.textContent=''
-  
-    
+
     card.forEach(cards => {
 
     const cardDiv = document.createElement('div')
@@ -48,13 +47,9 @@ const displayphone = (card,)=>{
     </div>        
     `
    
-    
-
    
     postcontiner.appendChild(cardDiv)
    
-    
-
 
     })
     
